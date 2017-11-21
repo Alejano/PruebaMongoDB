@@ -80,6 +80,9 @@ namespace MongoDB
             var db = client.GetDatabase("mongoprueba");
             var clientes = db.GetCollection<BsonDocument>("Cliente");
             clientes.InsertOne(DatosCliente);
+
+            textBox1.Clear();
+            textBox2.Clear();
         }
     }
 }
