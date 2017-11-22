@@ -48,7 +48,7 @@ namespace MongoDB
                         clientes.Find(filter).Sort(sort).ForEachAsync(song =>
                         clientesx = (clientesx+Convert.ToString(song["_id"])+" "+ Convert.ToString(song["Nombre"])+" "+Convert.ToString(song["Edad"])+"\r\n")
 
-                        //MessageBox.Show("Los datos son " + song["Nombre"] + "  " + song["Edad"])
+                        MessageBox.Show("Los datos son " + song["Nombre"] + "  " + song["Edad"])
                         );
 
               */
@@ -83,6 +83,18 @@ namespace MongoDB
 
             textBox1.Clear();
             textBox2.Clear();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            EliminadMDB eli = new EliminadMDB();
+            eli.Show();
+            Hide();
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

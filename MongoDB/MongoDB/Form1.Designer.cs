@@ -45,6 +45,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(260, 150);
             this.textBox3.TabIndex = 16;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox2
             // 
@@ -87,6 +88,7 @@
             this.button3.TabIndex = 11;
             this.button3.Text = "eliminar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
