@@ -15,6 +15,7 @@ namespace MongoDB
 {
     public partial class Form1 : Form
     {
+        
         public static String nombre = "";
         public static String edad = "";
         public static String clientesx = "";
@@ -69,6 +70,7 @@ namespace MongoDB
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             BsonDocument clientenuevo = new BsonDocument
                   {
                     { "Nombre" , textBox1.Text },

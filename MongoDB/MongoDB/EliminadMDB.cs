@@ -28,6 +28,7 @@ namespace MongoDB
             MongoClient client = new MongoClient("mongodb://prueba:qwerty@ds113046.mlab.com:13046/mongoprueba");
             var db = client.GetDatabase("mongoprueba");
             var clientes = db.GetCollection<BsonDocument>("Cliente");
+            var filter = Builders<BsonDocument>.Filter.Eq("_id",IDC);
 
             clientes.AsQueryable<BsonDocument>().ToList().ForEach(song =>
            clientesx = (clientesx + Convert.ToString(song["_id"]) + " " + Convert.ToString(song["Nombre"]) + " " + Convert.ToString(song["Edad"]) + "\r\n")
@@ -49,16 +50,26 @@ namespace MongoDB
         private void button2_Click(object sender, EventArgs e)
         {
             IDC = textBox2.Text;
+           
+
+            MessageBox.Show("Preparando carga");
+
             MongoClient client = new MongoClient("mongodb://prueba:qwerty@ds113046.mlab.com:13046/mongoprueba");
             var db = client.GetDatabase("mongoprueba");
             var clientes = db.GetCollection<BsonDocument>("Cliente");
-            var filter= Builders<BsonDocument>.Filter.Eq("_id", IDC);
 
-            clientes.DeleteMany(filter);
-             
+            //deleting single record
+             clientes.DeleteOneAsync(Builders<BsonDocument>.Filter.Eq("Nombre", IDC));
 
-            MessageBox.Show(":C");
-            
+            MessageBox.Show("cargando");
+
+
+            clientesx = "";
+          
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -68,15 +68,16 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(29, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(18, 13);
+            this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "ID";
+            this.label1.Text = "Nombre";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(63, 19);
+            this.textBox2.Location = new System.Drawing.Point(79, 19);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(195, 20);
+            this.textBox2.Size = new System.Drawing.Size(97, 20);
             this.textBox2.TabIndex = 4;
             // 
             // EliminadMDB
