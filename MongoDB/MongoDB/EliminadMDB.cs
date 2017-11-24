@@ -52,7 +52,7 @@ namespace MongoDB
             IDC = textBox2.Text;
            
 
-            MessageBox.Show("Preparando carga");
+            MessageBox.Show("Preparando carga  ............");
 
             MongoClient client = new MongoClient("mongodb://prueba:qwerty@ds113046.mlab.com:13046/mongoprueba");
             var db = client.GetDatabase("mongoprueba");
